@@ -1,0 +1,1 @@
+#getlyrics_fun

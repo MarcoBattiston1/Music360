@@ -6,10 +6,12 @@ If the input is not present in our dataset, the function
 returns some suggestions about valid input
 '''
 
+
 class Artist:
     def __init__(self, artist_name):
         self.artist_name = artist_name
 
+    @staticmethod
     def getdiscography(artist_name):
         import pandas as pd
         artist_name = artist_name.lower().strip()
@@ -24,4 +26,4 @@ class Artist:
                   "'Mariah Carey',\n" +
                   "'Madison Beer',\n" +
                   "'GASHI'!")
-        return (print(artist_name.title(), "made the following songs:\n", *discography, sep="\n"))
+        print(artist_name.title(), "made the following songs:\n", discography)

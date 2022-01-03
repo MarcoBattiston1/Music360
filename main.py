@@ -30,10 +30,8 @@ answer = args.song
 if args.artist:
 	response = input("Do you want to see the discography of the above-mentioned artist? (y/n) ->")
 	if response == "y":
-		print(args.artist)
 		Artist.getdiscography(args.artist)
 	else:
-		print(args.artist)
 		print("OK. If you want you can try with another artist!")
 
 elif args.karaoke:
@@ -45,6 +43,10 @@ elif args.karaoke:
 
 else:
 	Song.getinfo(args.song)
+	response = input("Do you want to make a karaoke of this song? (y/n) ->")
+	if response == "y":
+		Song.karaoke(args.song)
+
 
 
 

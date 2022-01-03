@@ -18,23 +18,23 @@ class Song:
         counter = 0
         for i in range(len(db.track_name)):
             if song_name == db.track_name[i].lower():
-                print("The song: '", db.track_name[i],"' is made by '",
-                     db.track_artist[i], "'. It was released in the album '",
-                      db.track_album_name[i], "', in the date", 
-                      db.track_album_release_date[i], ", and it appeared in the spotify playlist named",
-                      db.playlist_name[i], ", with other song of genre",
-                     db.playlist_genre[i], ", and subgenre",
-                     db.playlist_subgenre[i],". The song has",
-                     round(db.tempo[i]),"bpm and it lasts",
-                     round(db.duration_ms[i]/1000),"seconds.")
+                print("\nThe song: '", db.track_name[i],"' is made by '",
+                     db.track_artist[i], "'.\nIt was released in the album '",
+                      db.track_album_name[i], "', in the date ", 
+                      db.track_album_release_date[i], ", and it appeared in the spotify playlist named: '",
+                      db.playlist_name[i], "', with other song of genre ",
+                     db.playlist_genre[i], ", and subgenre ",
+                     db.playlist_subgenre[i],".\nThe song has ",
+                     round(db.tempo[i])," bpm and it lasts ",
+                     round(db.duration_ms[i]/1000)," seconds.\n", sep="")
                 counter += 1
                 break
         if counter ==0:
-            print("The song you're looking for is not present in our database. "+
+            print("\nThe song you're looking for is not present in our database. "+
                   "Here you are some recommended songs we have:\n" + 
                   "'Party Rock Anthem',\n" +
                   "'Symphony Of Destruction',\n" +
-                  "'Some Nights'!")
+                  "'Some Nights'!\n")
 
     @staticmethod
     def karaoke(song_name):
@@ -44,11 +44,15 @@ class Song:
         counter = 0
         for i in range(len(db.track_name)):
             if song_name == db.track_name[i].lower():
-                print("Type this in your favourite browser: 'spotify:track:",
+                print("\nType this in your favourite browser: 'spotify:track:",
                              str(db.track_id[i]), "' and sing with our lyrics!\n\n",
-                            str(db.lyrics[i]), sep="")
+                             db.track_name[i].upper(), " - ", db.track_artist[i].upper(), "\n\n",
+                            str(db.lyrics[i]), "\n" ,sep="")
                 counter += 1
                 break
         if counter == 0:
-            print("Not found!")
+            print("Not found!\nHere you are some recommended songs we have:\n" + 
+                  "'Party Rock Anthem',\n" +
+                  "'Symphony Of Destruction',\n" +
+                  "'Some Nights'!")
 

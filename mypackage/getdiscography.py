@@ -6,7 +6,6 @@ If the input is not present in our dataset, the function
 returns some suggestions about valid input
 '''
 
-
 class Artist:
     def __init__(self, artist_name):
         self.artist_name = artist_name
@@ -26,4 +25,5 @@ class Artist:
                   "'Mariah Carey',\n" +
                   "'Madison Beer',\n" +
                   "'GASHI'!")
-        print(artist_name.title(), "made the following songs:\n", discography)
+        print(artist_name.title(), "made the following songs:")
+        print(*discography, sep="\n")

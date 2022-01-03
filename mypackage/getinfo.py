@@ -14,7 +14,7 @@ class Song:
     def getinfo(song_name):
         import pandas as pd
         song_name = song_name.lower().strip()
-        db = pd.DataFrame(pd.read_csv('spotify_songs.csv'))
+        db = pd.DataFrame(pd.read_csv('mypackage/spotify_songs.csv'))
         counter = 0
         for i in range(len(db.track_name)):
             if song_name == db.track_name[i].lower():
@@ -40,13 +40,13 @@ class Song:
     def karaoke(song_name):
         import pandas as pd
         song_name = song_name.lower().strip()
-        db = pd.DataFrame(pd.read_csv('spotify_songs.csv'))
+        db = pd.DataFrame(pd.read_csv('mypackage/spotify_songs.csv'))
         counter = 0
         for i in range(len(db.track_name)):
             if song_name == db.track_name[i].lower():
                 print("Type this in your favourite browser: 'spotify:track:",
                              str(db.track_id[i]), "' and sing with our lyrics!\n\n",
-                            str(db.lyrics[i]))
+                            str(db.lyrics[i]), sep="")
                 counter += 1
                 break
         if counter == 0:

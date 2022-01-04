@@ -1,11 +1,9 @@
 from mypackage.getdiscography import Artist
 from mypackage.getinfo import Song
+from mypackage.getsong import Lyrics
 import argparse
-#import pandas as pd
 
 
-
-#db = pd.DataFrame(pd.read_csv('mypackage/spotify_songs.csv'))
 parser = argparse.ArgumentParser(description='This program will' +
                                              ' give you information' +
                                              ' about the song you input' +
@@ -18,14 +16,11 @@ group.add_argument('-a','--artist', nargs="?", type=str,
  help='Input the artist name to get his discography')
 group.add_argument('-k','--karaoke', nargs="?", type=str,
  help='Input a song title to start karaoke')
+group.add_argument('-f','--findsong', nargs="?", type=str,
+ help='Input a short lyrics to find out songs which contain it')
 args = parser.parse_args()
 answer = args.song
 
-# if __name__=='__main__':
-# 	print(Song.getinfo(args.song))
-
-#if __name__ == "__main__":
-#    Song.getinfo("Party Rock Anthem")
 
 if args.artist:
 	response = input("Do you want to see the discography of the above-mentioned artist? (y/n) ->")
@@ -40,6 +35,11 @@ elif args.karaoke:
 		Song.karaoke(args.karaoke)
 	else:
 		print("We'll give you time to set up. Warm up your voice properly and try karaoke again!")
+
+elif args.findsong:
+	response = input("Do you want to find songs which contain this lyrics? (y/n) ->")
+	if response == "y":
+		Lyrics.getsong(args.findsong)
 
 else:
 	Song.getinfo(args.song)

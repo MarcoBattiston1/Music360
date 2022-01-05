@@ -10,10 +10,11 @@ class Artist:
     def __init__(self, artist_name):
         self.artist_name = artist_name
 
+    @staticmethod
     def getdiscography(artist_name):
         import pandas as pd
         artist_name = artist_name.lower().strip()
-        db = pd.DataFrame(pd.read_csv('spotify_songs.csv'))
+        db = pd.read_csv('mypackage/spotify_songs.csv')
         discography = []
         for i in range(len(db.track_artist)):
             if artist_name == db.track_artist[i].lower():
@@ -24,4 +25,5 @@ class Artist:
                   "'Mariah Carey',\n" +
                   "'Madison Beer',\n" +
                   "'GASHI'!")
-        return (print(artist_name.title(), "made the following songs:\n", *discography, sep="\n"))
+        print(artist_name.title(), "made the following songs:")
+        print(*discography, sep="\n")

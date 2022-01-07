@@ -25,29 +25,21 @@ answer = args.song
 if args.artist:
 	response = input("Do you want to see the discography of the above-mentioned artist? (y/n) ->")
 	if response == "y":
-		Artist.getdiscography(args.artist)
+		print(Artist(args.artist, "mypackage/spotify_songs.csv").getdiscography())
 	else:
 		print("OK. If you want you can try with another artist!")
 
 elif args.karaoke:
 	response = input("Are you ready to start singing? (y/n) ->")
 	if response == "y":
-		Song.karaoke(args.karaoke)
+		print(Song(args.karaoke, "mypackage/spotify_songs.csv").karaoke())
 	else:
 		print("We'll give you time to set up. Warm up your voice properly and try karaoke again!")
 
 elif args.findsong:
 	response = input("Do you want to find songs which contain this lyrics? (y/n) ->")
 	if response == "y":
-		Lyrics.getsong(args.findsong)
+		print(Lyrics(args.findsong, "mypackage/spotify_songs.csv").getsong())
 
 else:
-	Song.getinfo(args.song)
-	response = input("Do you want to make a karaoke of this song? (y/n) ->")
-	if response == "y":
-		Song.karaoke(args.song)
-
-
-
-
-
+	print(Song(args.song, "mypackage/spotify_songs.csv").getinfo())

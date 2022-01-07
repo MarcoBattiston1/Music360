@@ -8,18 +8,18 @@ but stops at 50 songs in order to keep the output clear.
 '''
 
 class Lyrics:
-    def __init__(self, lyr):
+    def __init__(self, lyr, path):
         self.lyr = lyr
+        self.path = path
 
-    @staticmethod
-    def getsong(lyr):
+    def getsong(self):
         import pandas as pd
-        lyr = str(lyr)
-        lyr = lyr.lower()
+        lyr = str(self.lyr)
+        lyr = self.lyr.lower()
         wrong_input = ["", " "]
         if str(lyr) in wrong_input:
-            return(print("Empty input is not supported by the program. Try with something different!"))
-        db = pd.read_csv('mypackage/spotify_songs.csv')
+            return ("Empty input is not supported by the program. Try with something different!")
+        db = pd.read_csv(self.path)
         all_lyr = list(db["lyrics"])
         for i in range(len(all_lyr)):
             all_lyr[i] = all_lyr[i].lower()
@@ -31,13 +31,12 @@ class Lyrics:
                     print(db["track_name"][i], " - ", db["track_artist"][i])
                     n +=1
                     if n >= 50:
-                        print("\nExecution stopped at 50th matching result. " +
+                        return ("\nExecution stopped at 50th matching result. " +
                               "There are more than 50 songs with this input.\n")
-                        return
                     break
                     
         if n == 0:
-            print("So sorry! '" + lyr + "' seems not to be found in any song inside our database.\n\n"+
+            return ("So sorry! '" + lyr + "' seems not to be found in any song inside our database.\n\n"+
                  "You could try with other lyrics, try these for example:\n" +
                  "'Push it out, fake a smile'\n" +
                  "'I just wanna stay in the sun where I find'")

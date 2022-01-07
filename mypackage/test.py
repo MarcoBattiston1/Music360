@@ -16,7 +16,9 @@ class TestInput(unittest.TestCase):
     #smoke test: valid inputs
     def test_correct_track_name(self):
         
-        expected = ("The song: 'My Body' is made by 'Hot Shade'. It was released in the album 'My Body', in the date 2017-09-29, and it appeared in the spotify playlist named Tropical Beats, with other song of genre latin, and subgenre tropical. The song has 104 bpm and it lasts 161 seconds.")
+        expected = ("\nThe song: 'My Body' is made by 'Hot Shade'.\nIt was released in the album 'My Body', in the date 2017-09-29," +
+            " and it appeared in the spotify playlist named Tropical Beats, with other song of genre latin, and subgenre tropical." +
+            "\nThe song has 104 bpm and it lasts 161 seconds.\n")
         
         a = Song("My Body", "spotify_songs.csv")
         b = a.getinfo()
@@ -57,7 +59,7 @@ class TestInput(unittest.TestCase):
     #smoke test: valid inputs
     def test_correct_artist_name(self):
          
-        expected = ("Mariah Carey made the following songs: All I Want for Christmas Is You Emotions Always Be My Baby Obsessed Someday Make It Happen You're So Cold Dreamlover Thank God I Found You (feat. Joe & Nas) - Make It Last Remix Edit Fantasy One Sweet Day")
+        expected = ("\nMariah Carey made the following songs:\n\nAll I Want for Christmas Is You\nEmotions\nAlways Be My Baby\nObsessed\nSomeday\nMake It Happen\nYou're So Cold\nDreamlover\nThank God I Found You (feat. Joe & Nas) - Make It Last Remix Edit\nFantasy\nOne Sweet Day")
         
         a = Artist("Mariah Carey", "spotify_songs.csv")
         b = a.getdiscography()
@@ -99,7 +101,7 @@ class TestInput(unittest.TestCase):
     # #smoke test: valid inputs
     def test_correct_karaoke_song(self):
 
-        expected = (" \nType this in your favourite browser: 'spotify:track: " +
+        expected = (" \nType this in your favourite browser: 'spotify:track:" +
                     '0IkKz2J93C94Ei4BvDop7P' +"' and sing with our lyrics!\n\n " +
                     'PARTY ROCK ANTHEM' + " - " + 'LMFAO' + "\n\n" +
                     "Party Rock Yeah Whoo! Let's go! Party rockers in the house tonight Everybody just have a good time (Yeah) And we gon' make you lose your mind (Whoo!) Everybody just have a good time (Clap!) Party rockers in the house tonight (Oh!) Everybody just have a good time (I can feel it, baby!) And we gon' make you lose your mind (Yeah) We just wanna see you...Shake that! In the club: Party rock Looking for your girl? She on my jock (Huh) Non-stop when we in the spot Booty moving weight like she on the block (Whoo!) Where the drank? I gots to know Tight jeans, tattoo, 'cause I'm rock and roll Half-black, half-white: domino Gainin' money. Oprah, dough Yo! I'm running through these hoes like Drano I got that devilish flow rock and roll no halo, we party rock! Yeah, that's the crew that I'm reppin'On the rise to the top, no Led in our Zeppelin (Hey!) Party rockers in the house tonight (Whoo!) Everybody just have a good time (Yeah) And we gon' make you lose your mind Everybody just have a good time (Let's go!) Party rockers in the house tonight Everybody just have a good time (I can feel it, baby!) And we gon' make you lose your mind We just wanna see you...Shake that!Every day I'm shufflin' (Shake) Shufflin', shufflin' (Shake) Step up fast and be the first girl to make me throw this cash We get money don't be mad, now stop - hatin' is bad One more shot for us (Another round!) Please fill up my cup (Don't mess around!) We just wanna see (You shake it now!) Now you wanna be (You're naked now!) Get up, get down, put your hands up to the sound Get up, get down, put your hands up to the sound Get up, get down, put your hands up to the sound (Whoo!) Put your hands up to the sound Put your hands up to the sound (Let's go!) Get up, get up, get up Get up, get up, get up Get up, get up, get up Put your hands up to the sound To the sound Put your hands up (Whoo!) Put your hands up Put your hands up Put your hands up Party rockers in the house tonight (Put your hands up, whoo!) Everybody just have a good time (Put your hands up) And we gon' make you lose your mind (Put your hands up) Everybody just have a good, good, good time Oh-oh-oh-oh-oh (Put your hands up) Oh-oh-oh-oh-oh (I can feel it, baby!) Oh-oh-oh-oh-oh (Put your hands up) Oh-oh-oh-oh-oh (Put your hands up) Shake that!Every day I'm shu-shufflin' Put yo', Put yo' (Hands up) Put yo', Put yo' (Yeah) Put yo', Put yo' (Whoo!) Hands up Put yo', Put yo' (Hands up) Put your hands up Put your hands up Put your hands up Party Rock Yeah Whoo! Let's go! Party rockers in the house tonight Everybody just have a good time (Yeah) And we gon' make you lose your mind (Whoo!) Everybody just have a good time (Clap!) Party rockers in the house tonight (Oh!) Everybody just have a good time (I can feel it, baby!) And we gon' make you lose your mind (Yeah) We just wanna see you...Shake that! In the club: Party rock Looking for your girl? She on my jock (Huh) Non-stop when we in the spot Booty moving weight like she on the block (Whoo!) Where the drank? I gots to know Tight jeans, tattoo, 'cause I'm rock and roll Half-black, half-white: domino Gainin' money. Oprah, dough Yo! I'm running through these hoes like Drano I got that devilish flow rock and roll no halo, we party rock! Yeah, that's the crew that I'm reppin'On the rise to the top, no Led in our Zeppelin (Hey!) Party rockers in the house tonight (Whoo!) Everybody just have a good time (Yeah) And we gon' make you lose your mind Everybody just have a good time (Let's go!) Party rockers in the house tonight Everybody just have a good time (I can feel it, baby!) And we gon' make you lose your mind We just wanna see you...Shake that!Every day I'm shufflin' (Shake) Shufflin', shufflin' (Shake) Step up fast and be the first girl to make me throw this cash We get money don't be mad, now stop - hatin' is bad One more shot for us (Another round!) Please fill up my cup (Don't mess around!) We just wanna see (You shake it now!) Now you wanna be (You're naked now!) Get up, get down, put your hands up to the sound Get up, get down, put your hands up to the sound Get up, get down, put your hands up to the sound (Whoo!) Put your hands up to the sound Put your hands up to the sound (Let's go!) Get up, get up, get up Get up, get up, get up Get up, get up, get up Put your hands up to the sound To the sound Put your hands up (Whoo!) Put your hands up Put your hands up Put your hands up Party rockers in the house tonight (Put your hands up, whoo!) Everybody just have a good time (Put your hands up) And we gon' make you lose your mind (Put your hands up) Everybody just have a good, good, good time Oh-oh-oh-oh-oh (Put your hands up) Oh-oh-oh-oh-oh (I can feel it, baby!) Oh-oh-oh-oh-oh (Put your hands up) Oh-oh-oh-oh-oh (Put your hands up) Shake that!Every day I'm shu-shufflin' Put yo', Put yo' (Hands up) Put yo', Put yo' (Yeah) Put yo', Put yo' (Whoo!) Hands up Put yo', Put yo' (Hands up) Put your hands up Put your hands up Put your hands up")
@@ -142,7 +144,7 @@ class TestInput(unittest.TestCase):
     #smoke test: valid inputs
     def test_correct_get_song(self):
          
-        expected = ("Story Of A Lonely Guy"+ " - "+ "blink-182")
+        expected = ("STORY OF A LONELY GUY"+ " - "+ "BLINK-182\n")
 
         a = Lyrics("Push it out, fake a smile", "spotify_songs.csv")
         b = a.getsong()

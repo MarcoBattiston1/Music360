@@ -34,7 +34,8 @@ elif args.karaoke:
 	if response == "y":
 		print(Song(args.karaoke, "mypackage/spotify_songs.csv").karaoke())
 	else:
-		print("We'll give you time to set up. Warm up your voice properly and try karaoke again!")
+		print("\nWe'll give you time to set up. Warm up your voice properly and try karaoke again!\n" +
+			"And please, make sure to be ready for karaoke next time, you know...I got stuff to do!\n")
 
 elif args.findsong:
 	response = input("Do you want to find songs which contain this lyrics? (y/n) ->")

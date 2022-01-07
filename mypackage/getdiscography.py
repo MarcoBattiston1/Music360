@@ -30,4 +30,5 @@ class Artist:
                   " 'GASHI'! ")
         # print(artist_name.title(), "made the following songs:")
         # print(*discography, sep="\n")
-        return (artist_name.title() + " " + "made the following songs: " + " ".join(discography))
+        return ("\n" + artist_name.title() + " " +
+          "made the following songs:\n\n" + "\n".join(discography))

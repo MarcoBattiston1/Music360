@@ -30,17 +30,19 @@ class Lyrics:
         for i in range(len(all_lyr)):  # iterating through each lyrics of the dataset
             for j in range(len(all_lyr[i - len(lyr)])):  # accessing each set of words
                 if lyr == all_lyr[i][j:j + len(lyr)]:
-                    res += db["track_name"][i] + " - " + db["track_artist"][i]
+                    res += db["track_name"][i].upper() + " - " + db["track_artist"][i].upper() + "\n"
                     n += 1
                     if n >= 50:
-                        return (res + "\nExecution stopped at 50th matching result. " + 
+                        return (res + "\nExecution stopped at 50th matching result.\n" + 
                                 "There are more than 50 songs with this input.\n")
-                    return res
+                    break
 
         if n == 0:
             return ("So sorry! '" + lyr + "' seems not to be found in any song inside our database.\n\n" +
                     "You could try with other lyrics, try these for example:\n" +
                     "'Push it out, fake a smile'\n" +
                     "'I just wanna stay in the sun where I find'")
+
+        return res
 
             

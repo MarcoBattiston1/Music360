@@ -139,15 +139,15 @@ class TestInput(unittest.TestCase):
 
         self.assertEqual(b, expected)
 
-    # #smoke test: valid inputs
-    # def test_correct_get_song(self):
+    #smoke test: valid inputs
+    def test_correct_get_song(self):
          
-    #     expected = ("Story Of A Lonely Guy"+ " - "+ "blink-182")
+        expected = ("Story Of A Lonely Guy"+ " - "+ "blink-182")
 
-    #     a = Lyrics("Push it out, fake a smile", "spotify_songs.csv")
-    #     b = a.getsong()
+        a = Lyrics("Push it out, fake a smile", "spotify_songs.csv")
+        b = a.getsong()
 
-    #     self.assertEqual(b, expected)
+        self.assertEqual(b, expected)
     
     #invalid inputs
     def test_incorrect_get_song(self):

@@ -18,27 +18,29 @@ class Lyrics:
         lyr = self.lyr.lower()
         wrong_input = ["", " "]
         if str(lyr) in wrong_input:
-            return ("Empty input is not supported by the program. Try with something different!")
+            return "Empty input is not supported by the program. Try with something different!"
         db = pd.read_csv(self.path)
         all_lyr = list(db["lyrics"])
         for i in range(len(all_lyr)):
             all_lyr[i] = all_lyr[i].lower()
         n = 0
-        print("This could take a while...\n")
-        for i in range(len(all_lyr)): #iterating through each lyrics of the dataset
-            for j in range(len(all_lyr[i-len(lyr)])): #accessing each set of words
-                if lyr == all_lyr[i][j:j+len(lyr)]:
-                    print(db["track_name"][i], " - ", db["track_artist"][i])
-                    n +=1
+        if "mypackage" in self.path:
+            print("This could take a while...\n")
+        res = ""
+        for i in range(len(all_lyr)):  # iterating through each lyrics of the dataset
+            for j in range(len(all_lyr[i - len(lyr)])):  # accessing each set of words
+                if lyr == all_lyr[i][j:j + len(lyr)]:
+                    res += db["track_name"][i] + " - " + db["track_artist"][i]
+                    n += 1
                     if n >= 50:
-                        return ("\nExecution stopped at 50th matching result. " +
-                              "There are more than 50 songs with this input.\n")
-                    break
-                    
+                        return (res + "\nExecution stopped at 50th matching result. " + 
+                                "There are more than 50 songs with this input.\n")
+                    return res
+
         if n == 0:
-            return ("So sorry! '" + lyr + "' seems not to be found in any song inside our database.\n\n"+
-                 "You could try with other lyrics, try these for example:\n" +
-                 "'Push it out, fake a smile'\n" +
-                 "'I just wanna stay in the sun where I find'")
+            return ("So sorry! '" + lyr + "' seems not to be found in any song inside our database.\n\n" +
+                    "You could try with other lyrics, try these for example:\n" +
+                    "'Push it out, fake a smile'\n" +
+                    "'I just wanna stay in the sun where I find'")
 
             

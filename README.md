@@ -3,7 +3,7 @@
 Music360 is a university project for the course Lab of Software Project Development, developed by "Git me 30L" group, composed by Marco Battiston, Mike Cecconello, Roberto Buiatti and Pietro Donati.
 Let's have some fun!
 
-##CSV file 📊
+## CSV file 📊
 
 In order to store all the songs and authors, we selected a CSV file from Kaggle that acts as a big library of all the songs and authors, plus some additional informations. 
 Before starting, we cleaned the dataset form less interesting variables, ending up with 16 variables from the initial 25.
@@ -28,7 +28,7 @@ Language
 The original file contains roughly 16 thousand different songs.
 
 
-##Setting up ⚙️
+## Setting up ⚙️
 
 Before you access our software, a bit of preparation is required.
 First, by using the command git clone https://github.com/MarcoBattiston1/Music360.git in the terminal/command prompt of your PC, the entire folder containing all the modules and the files needed to run the program will automatically download. 
@@ -43,7 +43,7 @@ Numpy
 To flawlessly run our software, please run the command pip install “library_name” (or pip3 install “library_name”, depending on your python version) with both the above mentioned libraries. 
 
 
-##Features 🪄
+## Features 🪄
 
 The aim of the project is to create an interactive library of songs and artists.
 The user can access various informations like song infos, lyrics, discography and much more.
@@ -54,7 +54,7 @@ All functions are recalled in the main code.  These functions are then called by
 
 
 
-##Usage 🎸
+## Usage 🎸
 
 Now let’s see some frequent user interaction examples: 
 
@@ -87,7 +87,7 @@ python main.py -f "Push it out, fake a smile"
 ```
 
 
-##Running Tests ☑️
+## Running Tests ☑️
 
 In the folder Tests the user can find the unit tests. To perform tests, first make sure to be inside the directory Music360, then the command should be written as follows:
 
@@ -96,21 +96,21 @@ cd mypackage
 python test.py
 
 
-##CSV Source 📝
+## CSV Source 📝
 
 https://www.kaggle.com/imuhammad/audio-features-and-lyrics-of-spotify-songs
 
 
-##Contributing 🤟🏼
+## Contributing 🤟🏼
 
 Please contact us if you would like to contribute to this project. Feel free to expand or enhance current functionalities. 
 
-##License 🔑
+## License 🔑
 
 GNU License
 
 
-##Authors 🧻
+## Authors 🧻
 
 Marco Battiston
 Roberto Buiatti

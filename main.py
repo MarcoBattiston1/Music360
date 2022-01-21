@@ -1,6 +1,6 @@
-from mypackage.getdiscography import Artist
-from mypackage.getinfo import Song
-from mypackage.getsong import Lyrics
+from modules.getdiscography import Artist
+from modules.getinfo import Song
+from modules.getsong import Lyrics
 import argparse
 
 
@@ -25,14 +25,14 @@ answer = args.song
 if args.artist:
 	response = input("Do you want to see the discography of the above-mentioned artist? (y/n) ->")
 	if response == "y":
-		print(Artist(args.artist, "mypackage/spotify_songs.csv").getdiscography())
+		print(Artist(args.artist, "resources/spotify_songs.csv").getdiscography())
 	else:
 		print("OK. If you want you can try with another artist!")
 
 elif args.karaoke:
 	response = input("Are you ready to start singing? (y/n) ->")
 	if response == "y":
-		print(Song(args.karaoke, "mypackage/spotify_songs.csv").karaoke())
+		print(Song(args.karaoke, "resources/spotify_songs.csv").karaoke())
 	else:
 		print("\nWe'll give you time to set up. Warm up your voice properly and try karaoke again!\n" +
 			"And please, make sure to be ready for karaoke next time, you know...I got stuff to do!\n")
@@ -40,7 +40,7 @@ elif args.karaoke:
 elif args.findsong:
 	response = input("Do you want to find songs which contain this lyrics? (y/n) ->")
 	if response == "y":
-		print(Lyrics(args.findsong, "mypackage/spotify_songs.csv").getsong())
+		print(Lyrics(args.findsong, "resources/spotify_songs.csv").getsong())
 
 else:
-	print(Song(args.song, "mypackage/spotify_songs.csv").getinfo())
+	print(Song(args.song, "resources/spotify_songs.csv").getinfo())

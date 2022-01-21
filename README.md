@@ -107,7 +107,7 @@ Please contact us if you would like to contribute to this project. Feel free to 
 
 ## License 🔑
 
-GNU License
+MIT License
 
 
 ## Authors 🧻

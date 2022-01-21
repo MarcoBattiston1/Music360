@@ -10,20 +10,20 @@ Before starting, we cleaned the dataset form less interesting variables, ending 
 We called it spotify_songs.csv, since we based it on this streaming platform. 
 
 It is defined by the following properties:
-Track ID
-Track name
-Track artist
-Lyrics
-Track album ID
-Track album name
-Track album release date
-Playlist name
-Playlist ID
-Playlist genre
-Playlist subgenre
-Tempo
-Duration ms
-Language
+- Track ID
+- Track name
+- Track artist
+- Lyrics
+- Track album ID
+- Track album name
+- Track album release date
+- Playlist name
+- Playlist ID
+- Playlist genre
+- Playlist subgenre
+- Tempo
+- Duration ms
+- Language
 
 The original file contains roughly 16 thousand different songs.
 
@@ -36,8 +36,8 @@ In case git is not already present in your device, please proceed with the insta
 
 This is the list of the needed libraries:
 
-Pandas
-Numpy
+- Pandas
+- Numpy
 
 
 To flawlessly run our software, please run the command pip install “library_name” (or pip3 install “library_name”, depending on your python version) with both the above mentioned libraries. 
@@ -58,27 +58,27 @@ All functions are recalled in the main code.  These functions are then called by
 
 Now let’s see some frequent user interaction examples: 
 
-###SONG INFOS
+### SONG INFOS
 For accessing information about a specific song, for example Party Rock Anthem, the command should be written as follows:
 
 ```bash
 python main.py "Party Rock Anthem” 
 ```
 
-###DISCOGRAPHY
+### DISCOGRAPHY
 This function will return the entire discography of the artist, in this case example, Mariah Carey.
 
 ```bash
-python main.py -a “Mariah Carey” 
+python main.py -a "Mariah Carey”
 ```
-###KARAOKE
+### KARAOKE
 This karaoke function will return the entire lyrics of a specific song. It will also provide a copy-and-paste link for the Spotify version of the song, so the user can paste the link in his browser that will start playing the song on Spotify.
 
 ```bash
 python main.py -k "Party Rock Anthem"
 ```
 
-###FIND SONG
+### FIND SONG
 This function will solve a problem that all of us had at least once in our life. 
 With just a few words from the lyrics of a song as input, the function will help the user to find that song and its artist.
 
@@ -91,10 +91,10 @@ python main.py -f "Push it out, fake a smile"
 
 In the folder Tests the user can find the unit tests. To perform tests, first make sure to be inside the directory Music360, then the command should be written as follows:
 
-cd mypackage
-
+```bash
+cd test
 python test.py
-
+```
 
 ## CSV Source 📝
 
@@ -112,10 +112,10 @@ GNU License
 
 ## Authors 🧻
 
-Marco Battiston
-Roberto Buiatti
-Mike Cecconello
-Pietro Donati
+- Marco Battiston
+- Roberto Buiatti
+- Mike Cecconello
+- Pietro Donati
 
 
 

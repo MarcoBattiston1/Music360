@@ -2,16 +2,14 @@
 This module is the one that tests some of the functions
 necessary to let the user interact with the database.
 Each Test Case tests a Known valid and invalid entries.
-
 """
 
 import unittest
 import sys
-sys.path.insert(0, '../modules/')
-
 from getdiscography import Artist
 from getinfo import Song
 from getsong import Lyrics
+sys.path.insert(0, '../modules/')
 
 
 class TestInput(unittest.TestCase):

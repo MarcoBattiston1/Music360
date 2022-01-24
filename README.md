@@ -35,7 +35,7 @@ We recommend the last version of python3 for an optimal experience.
 First, by using the command:
 
 ```bash
-**git clone https://github.com/MarcoBattiston1/Music360.git**
+git clone https://github.com/MarcoBattiston1/Music360.git
 ```
 
 in the terminal/command prompt of your PC, the entire folder containing all the modules and the files needed to run the program will automatically download. 
@@ -51,7 +51,7 @@ To flawlessly run our software, please run the command pip install “library_na
 Secondly, use the command:
 
 ```bash
-**cd Music360**
+cd Music360
 ```
 
 in order to access the program.

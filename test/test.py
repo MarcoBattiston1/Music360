@@ -6,10 +6,11 @@ Each Test Case tests a Known valid and invalid entries.
 
 import unittest
 import sys
+sys.path.insert(0, '../modules/')
 from getdiscography import Artist
 from getinfo import Song
 from getsong import Lyrics
-sys.path.insert(0, '../modules/')
+
 
 
 class TestInput(unittest.TestCase):
@@ -81,12 +82,12 @@ class TestInput(unittest.TestCase):
     # invalid inputs
     def test_incorrect_artist_name(self):
 
-        expected = (" The artist you're looking for" +
-                    " is not present in our database. " +
-                    " Here you are some recommended artist we have:\n " +
-                    " 'Mariah Carey',\n " +
-                    " 'Madison Beer',\n " +
-                    " 'GASHI'! ")
+        expected = ("The artist you're looking for" +
+                   " is not present in our database. " +
+                   "Here you are some recommended artist we have:\n " +
+                   "'Mariah Carey',\n " +
+                   "'Madison Beer',\n " +
+                   "'GASHI'! ")
 
         a = Artist("Maria Carey", "../resources/spotify_songs.csv")
         c = Artist("85", "../resources/spotify_songs.csv")
@@ -99,12 +100,12 @@ class TestInput(unittest.TestCase):
     # corner case: empty string
     def test_empty_artist_name(self):
 
-        expected = (" The artist you're looking for" +
-                    " is not present in our database. " +
-                    " Here you are some recommended artist we have:\n " +
-                    " 'Mariah Carey',\n " +
-                    " 'Madison Beer',\n " +
-                    " 'GASHI'! ")
+        expected = ("The artist you're looking for" +
+                   " is not present in our database. " +
+                   "Here you are some recommended artist we have:\n " +
+                   "'Mariah Carey',\n " +
+                   "'Madison Beer',\n " +
+                   "'GASHI'! ")
 
         a = Artist(" ", "../resources/spotify_songs.csv")
         b = a.getdiscography()

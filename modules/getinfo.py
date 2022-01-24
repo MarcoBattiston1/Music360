@@ -12,6 +12,7 @@ import pandas as pd
 import os
 
 
+
 # creating a class named Song
 class Song:
 
@@ -21,6 +22,12 @@ class Song:
 
     # defining the function to return song info
     def getinfo(self):
+
+        #handling none input type
+        if self.song_name is None:
+            return("None input type not accepted." +
+                   "\nPlease provide a string input.")
+
         song_name = self.song_name.lower().strip()
         # assigning the database to the variable "db"
         db = pd.read_csv(self.path)
@@ -51,6 +58,12 @@ class Song:
 
     # defining the function to create a karaoke
     def karaoke(self):
+
+        #handling none input type
+        if self.song_name is None:
+            return("None input type not accepted." +
+                   "\nPlease provide a string input.")
+
         song_name = self.song_name.lower().strip()
         db = pd.read_csv(self.path)
         # creating a list with all song titles

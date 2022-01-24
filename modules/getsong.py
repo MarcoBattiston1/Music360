@@ -11,6 +11,8 @@ but stops at 50 songs in order to keep the output clear.
 import pandas as pd
 
 
+
+
 # creating a class named Lyrics
 class Lyrics:
     # initializing the object's attributes
@@ -20,6 +22,12 @@ class Lyrics:
 
     # function to return the song in which the text is found
     def getsong(self):
+
+        #handling none input type
+        if self.lyr is None:
+            return("None input type not accepted." +
+                   "\nPlease provide a string input.")
+
         lyr = str(self.lyr)
         lyr = self.lyr.lower()  # lowering user string input
 

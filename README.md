@@ -31,7 +31,14 @@ The original file contains roughly 16 thousand different songs.
 ## Setting up ⚙️
 
 Before you access our software, a bit of preparation is required.
-First, by using the command git clone https://github.com/MarcoBattiston1/Music360.git in the terminal/command prompt of your PC, the entire folder containing all the modules and the files needed to run the program will automatically download. 
+We recommend the last version of python3 for an optimal experience.
+First, by using the command:
+
+```bash
+**git clone https://github.com/MarcoBattiston1/Music360.git**
+```
+
+in the terminal/command prompt of your PC, the entire folder containing all the modules and the files needed to run the program will automatically download. 
 In case git is not already present in your device, please proceed with the installation.
 
 This is the list of the needed libraries:
@@ -39,8 +46,15 @@ This is the list of the needed libraries:
 - Pandas
 - Numpy
 
-
 To flawlessly run our software, please run the command pip install “library_name” (or pip3 install “library_name”, depending on your python version) with both the above mentioned libraries. 
+
+Secondly, use the command:
+
+```bash
+**cd Music360**
+```
+
+in order to access the program.
 
 
 ## Features 🪄

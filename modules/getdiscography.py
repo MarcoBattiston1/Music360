@@ -23,8 +23,6 @@ class Artist:
     # defining the function to return artist discography
     def getdiscography(self):
 
-        artist_name = self.artist_name
-
         #handling none input type
         if type(self.artist_name) is type(None):
             return("None input type not accepted." + 
